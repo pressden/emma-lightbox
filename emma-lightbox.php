@@ -21,7 +21,7 @@ function emma_lightbox_enqueue_frontend() {
   $lightbox_default_plugins = array(
     'lg-thumbnail',
   );
-  $lightbox_plugins = apply_filters( 'lightbox_plugins', $lightbox_default_plugins );
+  $lightbox_plugins = apply_filters( 'emma_lightbox_plugins', $lightbox_default_plugins );
   
   wp_enqueue_style( 'lightbox-library', $lightbox_library_css, [], $lightbox_library_version );
   wp_enqueue_script( 'lightbox-library', $lightbox_library_js, [], $lightbox_library_version, true );
