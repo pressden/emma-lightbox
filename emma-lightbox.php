@@ -19,15 +19,15 @@ function emma_lightbox_enqueue_frontend() {
   $lightbox_library_version = '2.2.1';
 
   $lightbox_default_plugins = array(
-    'lg-thumbnail',
+    'thumbnail' => 'lg-thumbnail',
   );
   $lightbox_plugins = apply_filters( 'emma_lightbox_plugins', $lightbox_default_plugins );
   
   wp_enqueue_style( 'lightbox-library', $lightbox_library_css, [], $lightbox_library_version );
   wp_enqueue_script( 'lightbox-library', $lightbox_library_js, [], $lightbox_library_version, true );
-  foreach( $lightbox_plugins as $plugin ) {
-    $plugin_js = plugin_dir_url( __FILE__ ) . 'vendor/lightgallery/plugins/thumbnail/' . $plugin . '.min.js';
-    wp_enqueue_script( $plugin, $plugin_js, ['lightbox-library'], $lightbox_library_version, true );
+  foreach( $lightbox_plugins as $directory => $file ) {
+    $plugin_js = plugin_dir_url( __FILE__ ) . 'vendor/lightgallery/plugins/' . $directory . '/' . $file . '.min.js';
+    wp_enqueue_script( 'lightbox-' . $directory . '-plugin', $plugin_js, ['lightbox-library'], $lightbox_library_version, true );
   }
   
   $lightbox_frontend_js = plugin_dir_url( __FILE__ ) . 'js/lightbox-frontend.js';
