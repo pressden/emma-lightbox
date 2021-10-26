@@ -23,6 +23,9 @@
         anchor.dataset.srcset = srcset;
         anchor.dataset.sizes = sizes;
       }
+      if( anchor.classList.contains( 'lightgallery-iframe' ) || anchor.closest( '.lightgallery-iframe' ) !== null ) {
+        anchor.dataset.iframe = 'true';
+      }
     } );
     lightGallery( gallery, lightGallerySettings );
   } );
