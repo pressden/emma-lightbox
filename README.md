@@ -15,7 +15,7 @@ This plugin adds lightbox functionality to the Gutenberg in WordPress via the [l
 For default functionality, simply add the class `lightgallery` to any link or container in Gutenberg. All links within the container (or the link the class is applied to directly) will open their content in a lightbox. If there are multiple links in the container, left/right controls will appear, along with thumbnails.
 
 ### Basic Options
-* This plugin is setup to use `srcset` for responsive images. If a gallery is created on the page, and the image source of each image matches the hyperlink that contains that image, `emma-lightbox` will automatically retrieve the `srcset` data from each `img` tag and apply it to the linked image that appears in the lightbox.
+* This plugin is configured to use `srcset` for responsive images. If a gallery is created on the page, and the image source of each image matches the hyperlink that contains that image, `emma-lightbox` will automatically retrieve the `srcset` data from each `img` tag and apply it to the linked image that appears in the lightbox.
 * If you wish a particular link or series of links to open within an iFrame, you can add the class `lg-iframe`. Adding `lg-iframe` to a container will apply the option to all contained links.
 * If you wish specific links to be ignored by a gallery that is applied to a container, you can use the class `lg-ignore`. If applied to a container, it will apply the option to all contained links.
 
