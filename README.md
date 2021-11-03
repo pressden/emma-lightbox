@@ -7,7 +7,7 @@ This plugin adds lightbox functionality to the Gutenberg in WordPress via the [l
 * activate plugin in WordPress
 
 ## Licensing
-* `lightGallery` is a licensed product. Please support the developer by purchasing a license [here](https://www.lightgalleryjs.com/license/). Check the [Advanced Options](#advanced-options) section for how to apply the license key.
+`lightGallery` is a licensed product. Please support the developer by purchasing a license [here](https://www.lightgalleryjs.com/license/). Check the [Advanced Options](#advanced-options) section for how to apply the license key.
 
 ## Use
 `emma-lightbox` is usable out-of-the-box with a series of default settings for `lightGallery`, some of which are cusotmizable (more on this later).
