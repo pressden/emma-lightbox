@@ -1,7 +1,6 @@
 ( function() {
   //create default settings for library
   var defaultLightGallerySettings = {
-    licenseKey: 'DD622256-1B89401A-8FC0F735-98E8EA6F',
     download: false,
     plugins: [lgThumbnail],
     thumbnail: true,
