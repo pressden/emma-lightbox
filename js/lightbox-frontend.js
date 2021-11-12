@@ -40,7 +40,17 @@
     //if galleryItems list has items, initialize gallery with settings
     if( galleryItems.length !== 0 ) {
       lightGallerySettings.selector = galleryItems;
-      lightGallery( gallery, lightGallerySettings );
+      let initGallery = lightGallery( gallery, lightGallerySettings );
+
+      //if gallery has an ID, tell all links to that ID to open the gallery
+      if( gallery.hasAttribute( 'id' ) ) {
+        document.querySelectorAll( 'a[href="#' + gallery.id + '"]' ).forEach( opener => {
+          opener.addEventListener( 'click', function( event ) {
+            event.preventDefault();
+            initGallery.openGallery();
+          } );
+        } );
+      }
     }
   } );
 } )();
