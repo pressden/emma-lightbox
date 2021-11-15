@@ -22,6 +22,7 @@
     //assess each link for various options
     anchors.forEach( anchor => {
       if( ! anchor.classList.contains( ".lg-ignore" ) && anchor.closest( '.lg-ignore' ) === null ) {
+        anchor.dataset.src = anchor.href;
         var img = anchor.querySelector( 'img' );
         if( img && anchor.href == img.src ) {
           var srcset = img.srcset;
