@@ -33,7 +33,7 @@ function emma_lightbox_enqueue_frontend() {
   $lightbox_frontend_js = plugin_dir_url( __FILE__ ) . 'js/lightbox-frontend.js';
   $lightbox_frontend_version = '1.0.0';
 
-  wp_enqueue_script( 'lightbox-frontend', $lightbox_frontend_js, ['lightbox-library', 'emma-scripts'], $lightbox_frontend_version, true );
+  wp_enqueue_script( 'lightbox-frontend', $lightbox_frontend_js, ['lightbox-library', 'emma'], $lightbox_frontend_version, true );
 
 }
 add_action( 'wp_enqueue_scripts', 'emma_lightbox_enqueue_frontend' );
