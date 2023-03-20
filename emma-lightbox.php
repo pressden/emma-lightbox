@@ -23,17 +23,17 @@ function emma_lightbox_enqueue_frontend() {
   );
   $lightbox_plugins = apply_filters( 'emma_lightbox_plugins', $lightbox_default_plugins );
   
-  wp_enqueue_style( 'lightbox-library', $lightbox_library_css, [], $lightbox_library_version );
-  wp_enqueue_script( 'lightbox-library', $lightbox_library_js, [], $lightbox_library_version, true );
+  wp_enqueue_style( 'emma-lightbox-library', $lightbox_library_css, [], $lightbox_library_version );
+  wp_enqueue_script( 'emma-lightbox-library', $lightbox_library_js, [], $lightbox_library_version, true );
   foreach( $lightbox_plugins as $directory => $file ) {
     $plugin_js = plugin_dir_url( __FILE__ ) . 'vendor/lightgallery/plugins/' . $directory . '/' . $file . '.min.js';
-    wp_enqueue_script( 'lightbox-' . $directory . '-plugin', $plugin_js, ['lightbox-library'], $lightbox_library_version, true );
+    wp_enqueue_script( 'emma-lightbox-' . $directory . '-plugin', $plugin_js, ['emma-lightbox-library'], $lightbox_library_version, true );
   }
   
   $lightbox_frontend_js = plugin_dir_url( __FILE__ ) . 'js/lightbox-frontend.js';
   $lightbox_frontend_version = '1.0.0';
 
-  wp_enqueue_script( 'lightbox-frontend', $lightbox_frontend_js, ['lightbox-library', 'emma'], $lightbox_frontend_version, true );
+  wp_enqueue_script( 'emma-lightbox-frontend', $lightbox_frontend_js, ['emma-lightbox-library', 'emma'], $lightbox_frontend_version, true );
 
 }
 add_action( 'wp_enqueue_scripts', 'emma_lightbox_enqueue_frontend' );
