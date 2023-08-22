@@ -1,5 +1,5 @@
 /*!
- * lightgallery | 2.2.1 | September 4th 2021
+ * lightgallery | 2.7.1 | January 11th 2023
  * http://www.lightgalleryjs.com/
  * Copyright (c) 2020 Sachin Neravath;
  * @license GPLv3
@@ -33,6 +33,9 @@ var __assign = function() {
 
 var fullscreenSettings = {
     fullScreen: true,
+    fullscreenPluginStrings: {
+        toggleFullscreen: 'Toggle Fullscreen',
+    },
 };
 
 var FullScreen = /** @class */ (function () {
@@ -55,8 +58,7 @@ var FullScreen = /** @class */ (function () {
                 return;
             }
             else {
-                fullScreen =
-                    '<button type="button" aria-label="Toggle fullscreen" class="lg-fullscreen lg-icon"></button>';
+                fullScreen = "<button type=\"button\" aria-label=\"" + this.settings.fullscreenPluginStrings['toggleFullscreen'] + "\" class=\"lg-fullscreen lg-icon\"></button>";
                 this.core.$toolbar.append(fullScreen);
                 this.fullScreen();
             }
