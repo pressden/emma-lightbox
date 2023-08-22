@@ -16,7 +16,7 @@ Text Domain: emma_lightbox
 function emma_lightbox_enqueue_frontend() {
   $lightbox_library_js = plugin_dir_url( __FILE__ ) . 'vendor/lightgallery/lightgallery.min.js';
   $lightbox_library_css = plugin_dir_url( __FILE__ ) . 'vendor/lightgallery/css/lightgallery-bundle.min.css';
-  $lightbox_library_version = '2.2.1';
+  $lightbox_library_version = '2.7.1';
 
   $lightbox_default_plugins = array(
     'thumbnail' => 'lg-thumbnail',
